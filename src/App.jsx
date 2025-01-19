@@ -1,14 +1,21 @@
 import React from 'react'
-import Navbar from './component/navbar/Navbar'
-import Login_comp from './component/login_form/Login_comp'
-import SignUpComp from './component/SignUpForm/SignUpComp'
+import {BrowserRouter as Router, Routes,Route} from 'react-router-dom'
+
+import HomePage from './pages/HomePage'
+import SignupPage from './pages/signupPage'
+import LoginPage from './pages/LoginPage'
 
 const App = () => {
   return (
-   <div className='min-h-screen flex flex-col  items-center '>
-   <Navbar/>
-   <SignUpComp/>
-   </div>
+   <>
+   <Router>
+    <Routes>
+      <Route path='/' element={<HomePage/>}/>
+      <Route path='/signup' element={<SignupPage/>}/>
+      <Route path='/login' element={<LoginPage/>}/>
+    </Routes>
+   </Router>
+   </>
   )
 }
 
