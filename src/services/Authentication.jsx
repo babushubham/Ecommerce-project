@@ -26,9 +26,19 @@ class AuthService{
     async login(email,password){
         try{
             const userAccount = await this.account.createEmailPasswordSession(email,password);
+            return userAccount
         }
         catch(error){
             console.error("Login Error:: Authentication::",error)
+        }
+    }
+
+    async getCurrentUser(){
+        try {
+            const currentUser = await this.account.get();
+            return currentUser;
+        } catch (error) {
+            console.error(error)
         }
     }
 }

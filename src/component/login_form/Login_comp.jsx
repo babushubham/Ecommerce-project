@@ -16,11 +16,17 @@ function Login_comp() {
     const handlePasswordChange = (e) => {
         setPassword(e.target.value)
     }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
     const handleSubmit = async(e) => {
         e.preventDefault()
         if (email === '' || password === '') {
             setError('Please fill in all fields')
+        } else if(!(emailRegex.test(email))){
+        setError('Please fill in a valid email')
+        } else if(!(passwordRegex.test(password))){
+            setError('Please fill in a password with at least 8 characters, one uppercase letter, one lowercase letter, one number and one special character')
         }
         else {
             setError('')
