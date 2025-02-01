@@ -1,5 +1,7 @@
 import {Client,Account, ID} from  'appwrite'
 import conf from '../config/conf.js'
+import { useDispatch } from 'react-redux';
+import { loginData } from '../store/authSlice.js';
 
 class AuthService{
     constructor(){
@@ -16,17 +18,25 @@ class AuthService{
     async signup(email,password,name){
         try{
             const userAccount = await this.account.create(ID.unique(),email,password,name);
+           
+            
             return userAccount;
         }catch(error) {
             console.error("Signup Error:: Authentication::",error)
             return error;
         }
     }
+    
 
     async login(email,password){
+        // const dispatch = useDispatch();
         try{
             const userAccount = await this.account.createEmailPasswordSession(email,password);
-            return userAccount
+            console.log(userAccount)
+           
+            return userAccount;
+            
+            
         }
         catch(error){
             console.error("Login Error:: Authentication::",error)
@@ -36,7 +46,17 @@ class AuthService{
     async getCurrentUser(){
         try {
             const currentUser = await this.account.get();
+            console.log(currentUser)
             return currentUser;
+        } catch (error) {
+            console.error('getcurrentUser::authentication::error',error)
+        }
+    }
+
+    async logout(){
+        try {
+            await this.account.deleteSessions();
+
         } catch (error) {
             console.error(error)
         }

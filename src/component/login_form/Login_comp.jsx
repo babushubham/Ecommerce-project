@@ -32,9 +32,21 @@ function Login_comp() {
             setError('')
             try {
                 const user = await authService.login(email,password)
-                navigate('/')
-            } catch (error) {
-                
+                if(user){
+                    userData = await authService.getCurrentUser(user);
+                    if(userData){
+                          
+                        navigate('/')
+                    }
+                    return;
+
+                }
+                else{
+                    navigate('/signup')
+                }
+            } catch (err) {
+                setError(err)
+                console.error(error);
             }
 
         }
@@ -52,7 +64,7 @@ function Login_comp() {
                 </div>
                 <div>{error}</div>
             </form>
-            <div className='text-gray-400 font-sans text-lg '>Don't have account? <a href='#' className='text-gray-500 border-b-2 border-gray-400 '><Link to='/signup'>Sign Up</Link></a></div>
+            <div className='text-gray-400 font-sans text-lg '>Don't have account? <Link to='/signup' className='text-gray-500 border-b-2 border-gray-400 '>Sign Up</Link></div>
         </div>
     )
 }

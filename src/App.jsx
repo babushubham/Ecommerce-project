@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes,Route} from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import SignupPage from './pages/signupPage'
 import LoginPage from './pages/LoginPage'
+import {Provider} from 'react-redux';
 
 const App = () => {
   return (

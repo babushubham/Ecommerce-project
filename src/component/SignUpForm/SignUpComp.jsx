@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import authService from '../../services/Authentication'
+import { useDispatch } from 'react-redux'
+import { loginData,logoutData } from '../../store/authSlice'
 
 
 const SignUpComp = () => {
@@ -44,10 +46,24 @@ const SignUpComp = () => {
             setError('')
             try {
                 const user = await authService.signup(email, password, name)
-                alert('Signup successful! User ID: ' + user.$id);
-                navigate('/')
+                if(user){
+                    // await authService.login(email,password)
+                    const userData = await authService.getCurrentUser(user);
+                    console.log(userData)
+                    if(userData){
+                        
+                        console.log(userData)
+                        navigate('/')
+                    }
+                    console.log('account found succesfully') 
+                    return 
+                    
+                }
+                else{
+                    console.log('err')
+                }
             } catch (error) {
-                alert('signup failed:: Error::', error)
+                console.log('signup failed:: Error::', error)
             }
         }
     }
