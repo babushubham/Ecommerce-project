@@ -24,11 +24,11 @@ const Navbar = () => {
   return (
     <>
       <div className='bg-white h-24 flex justify-evenly align-middle border-b-2 py-8 sticky top-0 box-border max-w-full '>
-        <div className='text-2xl font-semibold font-sans '>My Store</div>
+        <Link to='/'><div className='text-2xl font-semibold font-sans '>My Store</div></Link>
         <div className='flex align-middle justify-between gap-8 text-lg text-gray-700 font-sans py-1'>
-          <div><Link to='/'>Home</Link></div>
-          <div>Contact</div>
-          <div>About</div>
+          <div><Link to='/' className='active:border-b-2 border-orange-500'>Home</Link></div>
+          <div><Link to='/contact'>Contact Us</Link></div>
+          <div><Link to='/about'>About</Link></div>
           <div><Link to='/signup'>Sign Up</Link></div>
         </div>
 

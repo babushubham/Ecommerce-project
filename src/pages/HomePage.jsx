@@ -3,7 +3,11 @@ import Layout_comp from '../component/Layout/Layout_comp'
 import authService from '../services/Authentication'
 
 import Hero from '../component/hero/hero'
-import ProductList from '../component/productList/productList'
+
+import LatestCollction from '../component/latestCpmponent/LatestCollction'
+import BestSeller from '../component/bestSeller/BestSeller'
+import Testimonials from '../component/testimonials/Testimonial'
+import Features from '../component/features/Features'
 const HomePage = () => {
   if(true){
 
@@ -13,12 +17,14 @@ console.log('user is logged in')
   }
   return (
     <Layout_comp>
-      <div className=' min-h-screen'>
+     
         <Hero />
-        <div className='mx-28 mb-16 flex gap-4 items-center'><div className='h-12 w-6 rounded  bg-orange-500 '></div><h1 className='text-2xl'>Today's deal</h1></div>
-        <ProductList/>
-        
-      </div>
+        <LatestCollction/>
+        <BestSeller/>
+         
+        <Testimonials/>
+        <Features/>
+      
     </Layout_comp>
   )
 }
