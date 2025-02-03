@@ -27,9 +27,9 @@ const Navbar = () => {
         <Link to='/'><div className='text-2xl font-semibold font-sans '>My Store</div></Link>
         <div className='flex align-middle justify-between gap-8 text-lg text-gray-700 font-sans py-1'>
           <div><Link to='/' className='active:border-b-2 border-orange-500'>Home</Link></div>
+          <div><Link to='/collection'>Collection</Link></div>
           <div><Link to='/contact'>Contact Us</Link></div>
           <div><Link to='/about'>About</Link></div>
-          <div><Link to='/signup'>Sign Up</Link></div>
         </div>
 
         <div className='flex bg-gray-100 rounded-lg p-2'>

@@ -10,7 +10,7 @@ const BestSeller = () => {
     const [bestSeller,setBestSeller] = useState([]);
     useEffect(()=>{
        const filteredProduct = products.filter((item)=>item.bestseller == true )
-        setBestSeller(filteredProduct);
+        setBestSeller(filteredProduct.slice(3,7));
     },[])
   return (
     <div className='m-14'>

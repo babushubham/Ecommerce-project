@@ -41,6 +41,18 @@ const products = [
     bestseller: true,
   },
   {
+    productId: "MOB005",
+    name: "Xiaomi 13 Pro",
+    description: "6.73-inch AMOLED display, Snapdragon 8 Gen 2, 50MP Leica camera, 4820mAh battery.",
+    price: 899,
+    image: "https://example.com/xiaomi-13-pro.jpg",
+    category: "Electronics",
+    subcategory: "Mobile Phones",
+    size: "6.73 inches",
+    date: "2024-02-02",
+    bestseller: true
+  },
+  {
     productId: "E002",
     name: "Smartwatch Pro X",
     description: "Advanced smartwatch with fitness tracking and heart rate monitoring.",
@@ -50,6 +62,18 @@ const products = [
     subCategory: "Wearables",
     size: [],
     date: "2024-01-12",
+    bestseller: true,
+  },
+  {
+    productId: "E013",
+    name: "Smart Home Security Camera",
+    description: "WiFi-enabled security camera with night vision.",
+    price: 89.99,
+    image: "https://via.placeholder.com/200",
+    category: "Electronics",
+    subCategory: "Smart Home",
+    size: [],
+    date: "2024-02-10",
     bestseller: true,
   },
   {
@@ -76,6 +100,19 @@ const products = [
     date: "2024-01-18",
     bestseller: true,
   },
+  {
+    productId: "CAM004",
+    name: "Fujifilm X-T5",
+    description: "40MP APS-C sensor, 6.2K video, 7-stop IBIS, Classic film simulations.",
+    price: 1699,
+    image: "https://example.com/fujifilm-x-t5.jpg",
+    category: "Electronics",
+    subcategory: "Cameras",
+    size: "APS-C",
+    date: "2024-02-02",
+    bestseller: false
+  },
+ 
   {
     productId: "E005",
     name: "Wireless Earbuds",
@@ -172,18 +209,7 @@ const products = [
     date: "2024-02-07",
     bestseller: false,
   },
-  {
-    productId: "E013",
-    name: "Smart Home Security Camera",
-    description: "WiFi-enabled security camera with night vision.",
-    price: 89.99,
-    image: "https://via.placeholder.com/200",
-    category: "Electronics",
-    subCategory: "Smart Home",
-    size: [],
-    date: "2024-02-10",
-    bestseller: true,
-  },
+  
   {
     productId: "E014",
     name: "1080p Dash Cam",
@@ -231,7 +257,226 @@ const products = [
     size: [],
     date: "2024-02-20",
     bestseller: false,
-  }
+  },
+  {
+    productId: "MOB001",
+    name: "Samsung Galaxy S23 Ultra",
+    description: "6.8-inch AMOLED display, Snapdragon 8 Gen 2, 200MP camera, 5000mAh battery.",
+    price: 1199,
+    image: "https://example.com/samsung-s23-ultra.jpg",
+    category: "Electronics",
+    subcategory: "Mobile Phones",
+    size: "6.8 inches",
+    date: "2024-02-02",
+    bestseller: true
+  },
+  {
+    productId: "MOB002",
+    name: "iPhone 15 Pro Max",
+    description: "6.7-inch Super Retina XDR display, A17 Bionic chip, 48MP triple camera, 4500mAh battery.",
+    price: 1299,
+    image: "https://example.com/iphone-15-pro-max.jpg",
+    category: "Electronics",
+    subcategory: "Mobile Phones",
+    size: "6.7 inches",
+    date: "2024-02-02",
+    bestseller: true
+  },
+  {
+    productId: "MOB003",
+    name: "Google Pixel 8 Pro",
+    description: "6.7-inch OLED display, Google Tensor G3, 50MP camera, 5000mAh battery.",
+    price: 999,
+    image: "https://example.com/google-pixel-8-pro.jpg",
+    category: "Electronics",
+    subcategory: "Mobile Phones",
+    size: "6.7 inches",
+    date: "2024-02-02",
+    bestseller: false
+  },
+  {
+    productId: "MOB004",
+    name: "OnePlus 11 5G",
+    description: "6.7-inch Fluid AMOLED display, Snapdragon 8 Gen 2, 50MP triple camera, 5000mAh battery.",
+    price: 799,
+    image: "https://example.com/oneplus-11.jpg",
+    category: "Electronics",
+    subcategory: "Mobile Phones",
+    size: "6.7 inches",
+    date: "2024-02-02",
+    bestseller: false
+  },
+  
+  
+    {
+      productId: "LAP001",
+      name: "Apple MacBook Pro M2",
+      description: "14-inch Liquid Retina XDR display, Apple M2 Pro chip, 16GB RAM, 512GB SSD.",
+      price: 1999,
+      image: "https://example.com/macbook-pro-m2.jpg",
+      category: "Electronics",
+      subcategory: "Laptops",
+      size: "14 inches",
+      date: "2024-02-02",
+      bestseller: true
+    },
+    {
+      productId: "LAP002",
+      name: "Dell XPS 15",
+      description: "15.6-inch 4K OLED display, Intel Core i7-13700H, 16GB RAM, 1TB SSD, RTX 4060.",
+      price: 1799,
+      image: "https://example.com/dell-xps-15.jpg",
+      category: "Electronics",
+      subcategory: "Laptops",
+      size: "15.6 inches",
+      date: "2024-02-02",
+      bestseller: true
+    },
+    {
+      productId: "LAP003",
+      name: "ASUS ROG Zephyrus G14",
+      description: "14-inch QHD 165Hz display, AMD Ryzen 9 7940HS, 32GB RAM, 1TB SSD, RTX 4070.",
+      price: 1899,
+      image: "https://example.com/asus-rog-g14.jpg",
+      category: "Electronics",
+      subcategory: "Laptops",
+      size: "14 inches",
+      date: "2024-02-02",
+      bestseller: false
+    },
+    {
+      productId: "LAP004",
+      name: "Lenovo ThinkPad X1 Carbon Gen 11",
+      description: "14-inch 2.8K OLED display, Intel Core i7-1365U, 16GB RAM, 1TB SSD, Business laptop.",
+      price: 1699,
+      image: "https://example.com/lenovo-thinkpad-x1.jpg",
+      category: "Electronics",
+      subcategory: "Laptops",
+      size: "14 inches",
+      date: "2024-02-02",
+      bestseller: false
+    },
+    {
+      productId: "LAP005",
+      name: "HP Spectre x360 16",
+      description: "16-inch OLED 3K display, Intel Core i7-13700H, 16GB RAM, 1TB SSD, 2-in-1 convertible.",
+      price: 1899,
+      image: "https://example.com/hp-spectre-x360.jpg",
+      category: "Electronics",
+      subcategory: "Laptops",
+      size: "16 inches",
+      date: "2024-02-02",
+      bestseller: true
+    },
+    {
+      productId: "TAB001",
+      name: "Apple iPad Pro 12.9 (M2)",
+      description: "12.9-inch Liquid Retina XDR display, Apple M2 chip, 8GB RAM, 256GB storage, iPadOS.",
+      price: 1099,
+      image: "https://example.com/ipad-pro-m2.jpg",
+      category: "Electronics",
+      subcategory: "Tablets",
+      size: "12.9 inches",
+      date: "2024-02-02",
+      bestseller: true
+    },
+    {
+      productId: "TAB002",
+      name: "Samsung Galaxy Tab S9 Ultra",
+      description: "14.6-inch Dynamic AMOLED 2X display, Snapdragon 8 Gen 2, 12GB RAM, 512GB storage.",
+      price: 1199,
+      image: "https://example.com/galaxy-tab-s9-ultra.jpg",
+      category: "Electronics",
+      subcategory: "Tablets",
+      size: "14.6 inches",
+      date: "2024-02-02",
+      bestseller: true
+    },
+    {
+      productId: "TAB003",
+      name: "Microsoft Surface Pro 9",
+      description: "13-inch PixelSense display, Intel Core i7, 16GB RAM, 512GB SSD, Windows 11.",
+      price: 1299,
+      image: "https://example.com/surface-pro-9.jpg",
+      category: "Electronics",
+      subcategory: "Tablets",
+      size: "13 inches",
+      date: "2024-02-02",
+      bestseller: false
+    },
+    {
+      productId: "CAM001",
+      name: "Canon EOS R5",
+      description: "45MP Full-Frame CMOS sensor, 8K video recording, Dual Pixel AF, Wi-Fi & Bluetooth.",
+      price: 3899,
+      image: "https://example.com/canon-eos-r5.jpg",
+      category: "Electronics",
+      subcategory: "Cameras",
+      size: "Full-Frame",
+      date: "2024-02-02",
+      bestseller: true
+    },
+    {
+      productId: "CAM002",
+      name: "Sony Alpha A7 IV",
+      description: "33MP Full-Frame sensor, 4K 60fps recording, Real-time Eye AF, 10-bit video.",
+      price: 2499,
+      image: "https://example.com/sony-a7-iv.jpg",
+      category: "Electronics",
+      subcategory: "Cameras",
+      size: "Full-Frame",
+      date: "2024-02-02",
+      bestseller: true
+    },
+    {
+      productId: "CAM003",
+      name: "Nikon Z9",
+      description: "45.7MP Stacked CMOS sensor, 120fps burst shooting, 8K video, 5-axis stabilization.",
+      price: 5499,
+      image: "https://example.com/nikon-z9.jpg",
+      category: "Electronics",
+      subcategory: "Cameras",
+      size: "Full-Frame",
+      date: "2024-02-02",
+      bestseller: false
+    },
+    
+    {
+      productId: "CAM005",
+      name: "Panasonic Lumix GH6",
+      description: "25.2MP Micro Four Thirds sensor, 5.7K 60fps video, 7.5-stop stabilization, ProRes support.",
+      price: 2199,
+      image: "https://example.com/panasonic-gh6.jpg",
+      category: "Electronics",
+      subcategory: "Cameras",
+      size: "Micro Four Thirds",
+      date: "2024-02-02",
+      bestseller: true
+    },
+    {
+      productId: "TAB004",
+      name: "Lenovo Tab P12 Pro",
+      description: "12.6-inch AMOLED display, Snapdragon 870, 8GB RAM, 256GB storage, Android 13.",
+      price: 799,
+      image: "https://example.com/lenovo-tab-p12-pro.jpg",
+      category: "Electronics",
+      subcategory: "Tablets",
+      size: "12.6 inches",
+      date: "2024-02-02",
+      bestseller: false
+    },
+    {
+      productId: "TAB005",
+      name: "Amazon Fire HD 10 Plus",
+      description: "10.1-inch Full HD display, 4GB RAM, 64GB storage, Alexa integration, FireOS.",
+      price: 179,
+      image: "https://example.com/amazon-fire-hd-10.jpg",
+      category: "Electronics",
+      subcategory: "Tablets",
+      size: "10.1 inches",
+      date: "2024-02-02",
+      bestseller: true
+    }
 ];
 
 export default products;

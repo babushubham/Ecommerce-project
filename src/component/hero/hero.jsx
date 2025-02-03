@@ -5,7 +5,7 @@ import salebanner from '../../asset/megasale.jpeg'
 const heroComp = () => {
     return (
         <div className='flex justify-center  '>
-            <div className='w-1/4  flex flex flex-col items-center h-[610px] pt-14 box-border gap-4  pl-8 border-r-2 border-gray-300'>
+            <div className='w-1/4  flex flex-col items-center h-[610px] pt-14 box-border gap-4  pl-8 border-r-2 border-gray-300'>
                 <div className='w-1/2 text-xl font-serif '>Women Fashion</div>
                 <div className='w-1/2 text-xl font-serif '>Mens Fashion</div>
                 <div className='w-1/2 text-xl font-serif '>Electronics</div>
