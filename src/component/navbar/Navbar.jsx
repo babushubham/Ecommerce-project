@@ -18,8 +18,8 @@ const Navbar = () => {
     dispatch(logoutData());
 
   }
-  console.log(authStatus)
-  console.log(userInfo)
+  // console.log(authStatus)
+  // console.log(userInfo)
 
   return (
     <>

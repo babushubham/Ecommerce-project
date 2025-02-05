@@ -9,6 +9,7 @@ import {Provider} from 'react-redux';
 import ContactUsPage from './pages/ContactUsPage'
 import AboutPage from './pages/AboutPage'
 import Collection from './pages/Collection'
+import CategoryCollectionPage from './pages/CategoryCollectionPage'
 
 const App = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
       <Route path='/about' element={<AboutPage/>}/>
       <Route path='/product/:id' element={<ProductPage/>}/>
       <Route path='/collection' element={<Collection/>}/>
-      {/* <Route path='' element={}/> */}
+      <Route path='/category/:cateogryName' element={<CategoryCollectionPage/>}/>
     </Routes>
    </Router>
    </>

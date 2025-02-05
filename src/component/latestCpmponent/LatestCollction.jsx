@@ -14,7 +14,7 @@ const LatestCollction = () => {
   return (
     <div className='m-14'>
         <Title text1={'Latest Collection' }/>
-        <div className='flex justify-around items-center m-10 gap-5 overflow-x-scroll scrollbar-hide h-96'>
+        <div className='flex justify-around items-center m-10 gap-5 overflow-x-scroll scrollbar-hide h-[450px]'>
             {
                 latestPoduct.map((item,index)=>{
                     return(

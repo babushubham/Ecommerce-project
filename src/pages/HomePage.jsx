@@ -8,6 +8,7 @@ import LatestCollction from '../component/latestCpmponent/LatestCollction'
 import BestSeller from '../component/bestSeller/BestSeller'
 import Testimonials from '../component/testimonials/Testimonial'
 import Features from '../component/features/Features'
+import Cateogry from '../component/cateogry/cateogry'
 const HomePage = () => {
   if(true){
 
@@ -20,6 +21,7 @@ console.log('user is logged in')
      
         <Hero />
         <LatestCollction/>
+        <Cateogry/>
         <BestSeller/>
          
         <Testimonials/>
