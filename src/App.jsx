@@ -10,11 +10,13 @@ import ContactUsPage from './pages/ContactUsPage'
 import AboutPage from './pages/AboutPage'
 import Collection from './pages/Collection'
 import CategoryCollectionPage from './pages/CategoryCollectionPage'
+import ScrollToTop from './component/scrollToTop/ScrollToTop'
 
 const App = () => {
   return (
    <>
    <Router>
+   <ScrollToTop/>
     <Routes>
       <Route path='/' element={<HomePage/>}/>
       <Route path='/signup' element={<SignupPage/>}/>
