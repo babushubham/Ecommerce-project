@@ -4,12 +4,12 @@ import { ShopContext } from '../../context/Shopcontext'
 const ProductDetail = ({Prodid}) => {
     const {products} = useContext(ShopContext);
     const product = products.filter(product=>product.productId === Prodid);
-    console.log(product[0])
+    // console.log(product[0])
     const ProductDesc = product[0].description;
     const ProductPrice = product[0].price;
     const productName = product[0].name;
     const bestSeller = product[0].bestseller;
-    console.log(bestSeller)
+    // console.log(bestSeller)
 
 
 
