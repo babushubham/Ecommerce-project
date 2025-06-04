@@ -23,11 +23,27 @@ const CategoryCollectionPage = () => {
   return (
     <Layout_comp>
       <div className='flex flex-col items-center justify-center '>
-        <div className='flex gap-8 items-center justify-center my-16 py-6 px-12 bg-gray-100 shadow-lg border-gray-300 border rounded-xl  '>
-          <div className='w-8 h-16 bg-orange-500 rounded-md'></div>
-          <h1 className='text-5xl  '>{currCateogry.replaceAll('%20', ' ')}</h1>
-          <div className='w-8 h-16 bg-orange-500 rounded-md'></div>
-        </div>
+
+        
+        <div className="flex items-center justify-center gap-8 my-20 px-6 py-10 rounded-2xl shadow-md bg-[#FFF7ED] border border-orange-200 relative overflow-hidden">
+
+  {/* Tilted Gradient Side Bar - Left */}
+  <div className="w-3 h-20 bg-gradient-to-b from-orange-400 to-pink-400 rotate-6 rounded-lg shadow-md"></div>
+
+  {/* Funky Title */}
+  <h1 className="text-4xl sm:text-6xl font-extrabold text-gray-800 relative group tracking-wide text-center transition-all duration-300">
+    {currCateogry.replaceAll('%20', ' ')}
+
+    {/* Funky Underline */}
+    <span className="block mt-3 h-1 w-full bg-orange-400 rounded-full group-hover:w-1/2 transition-all duration-500 ease-in-out"></span>
+  </h1>
+
+  {/* Tilted Gradient Side Bar - Right */}
+  <div className="w-3 h-20 bg-gradient-to-b from-pink-400 to-orange-400 -rotate-6 rounded-lg shadow-md"></div>
+</div>
+
+
+
         <div className='flex flex-wrap min-h-screen'>
           {catprod.map((product, index) => (
             <ProductItem id={product.productId} key={index} image={iphone} name={product.name} price={product.price} />
