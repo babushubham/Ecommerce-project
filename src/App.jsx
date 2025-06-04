@@ -4,7 +4,7 @@ import ProductPage from './pages/ProductPage'
 
 import HomePage from './pages/HomePage'
 import SignupPage from './pages/signupPage'
-import LoginPage from './pages/LoginPage'
+// import LoginPage from './pages/LoginPage'
 import {Provider} from 'react-redux';
 import ContactUsPage from './pages/ContactUsPage'
 import AboutPage from './pages/AboutPage'
